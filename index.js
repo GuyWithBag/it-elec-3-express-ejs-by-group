@@ -1,27 +1,17 @@
-const express = require("express") 
-const app = express()
-const port = 8000
-const { hello, students, fullnames } = require('./mymodule')
+const express = require("express");
+const app = express();
+const port = 8000;
 
-app.set('view engine', 'ejs') 
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 
+app.get(["/", "/index"], (req, res) => {
+    res.render("index");
+});
+app.get("/about", (req, res) => res.render("about"));
+app.get("/contact", (req, res) => res.render("contact"));
+app.get("/services", (req, res) => res.render("services"));
 
-app.get('/', (req, res) => {
-        res.render('index', {heading: 'ex batallion music'}) 
+app.use((req, res) => res.status(404).render("error"));
 
-})
-
-app.get('/about', (req, res) => {
-        res.render('about', {
-            studentData: students, 
-            helloFunc: hello
-        }) 
-})
-
-app.listen(
-    port, 
-    (req, res) => {
-        console.log(`Server is running on PORT: ${port}`)
-        console.log(students)
-    }
-)
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

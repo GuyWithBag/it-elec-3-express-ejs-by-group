@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my about page.</h1>
+    <% for (let i = 0; i < studentData.length; i++) {%>
+        <p><%=studentData[i].name%></p>
+        <p><%=studentData[i].age%></p>
+        <p><%=studentData[i].course%></p>
+        <p><%=helloFunc(studentData[i].name)%></p>
+    <% } %>
+</body>
+</html>

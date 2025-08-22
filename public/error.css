@@ -1,0 +1,34 @@
+/* Center the hero section and its content */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.error-content {
+    text-align: center;
+    background: #242121;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    max-width: 500px;
+    margin: auto;
+}
+
+.error-link {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.error-actions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.error-actions li {
+    margin: 0.5em 0;
+}

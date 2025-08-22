@@ -1,0 +1,96 @@
+/* Center the hero section and its content */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+}
+
+/* Center the content and photo side by side */
+.content {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(120, 103, 103, 0.1);
+    margin-right: 40px;
+}
+.contact-form {
+    text-align: left;
+}
+
+
+.photo-container img {
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    filter: brightness(1.15); 
+}
+
+
+.photo {
+    display: flex;
+    align-items: center;
+}
+
+/* Center the footer */
+.footer-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Center the form elements */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background: #ff9000;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.slogan {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+    .content {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .photo img {
+        max-width: 100%;
+    }
+}
